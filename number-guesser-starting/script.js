@@ -31,13 +31,7 @@ const compareGuesses = (human, computer, target) => {
 // Increases the score variable (humanScore or computerScore) by 1 depending on the winner passed in to updateScore. The string passed in will be either 'human' or 'computer'.
 // Does not need to return any value.
 
-const updateScore = winner => {
-    if (winner === 'human') {
-        humanScore += 1
-    } else {
-        computerScore += 1
-    };
-};
+const updateScore = winner => winner === 'human' ? humanScore += 1 : computerScore += 1;
 
 // Create an advanceRound() function. This function will be used to update the round number after each round.
 // advanceRound() should increase the value of currentRoundNumber by 1.
