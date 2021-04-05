@@ -9,3 +9,13 @@ let currentRoundNumber = 1;
 const generateTarget = () => {
     return Math.floor(Math.random() * 10)
 };
+
+// Create a compareGuesses() function. 
+// This function will be called each round to determine which guess is closest to the target number.
+
+
+const compareGuesses = (human, computer, target) => {
+    const humanDifference = Math.abs(target - human);
+    const computerDifference = Math.abs(target - computer);
+    return humanDifference <= computerDifference;
+}
