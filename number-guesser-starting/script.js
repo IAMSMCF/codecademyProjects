@@ -17,11 +17,15 @@ const generateTarget = () => {
 // Determines which player (human or computer) wins based on which guess is closest to the target. If both players are tied, the human user should win.
 // Return true if the human player wins, and false if the computer player wins.
 
+const getAbsoluteDistanceBetweenGuesses = (n1, n2) => {
+    return distanceBetweenGuesses = Math.abs(n1 - n2)
+};
+
 const compareGuesses = (human, computer, target) => {
-    const humanDifference = Math.abs(target - human);
-    const computerDifference = Math.abs(target - computer);
+    let humanDifference = getAbsoluteDistanceBetweenGuesses(human, target);
+    let computerDifference = getAbsoluteDistanceBetweenGuesses(computer, target);
     return humanDifference <= computerDifference;
-}
+};
 
 
 // Create an updateScore() function. This function will be used to correctly increase the winner’s score after each round.
