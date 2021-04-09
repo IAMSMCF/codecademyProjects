@@ -49,6 +49,10 @@ button {
     outline-style: none;
 }
 
+button:hover {
+    background-color: aqua;
+}
+
 span {
     font-size: 40px;
     line-height: 40px;
